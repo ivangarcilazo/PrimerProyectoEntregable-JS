@@ -23,9 +23,9 @@ function cuotas(costoVuelo){
         alert("¡Gracias por tenernos en cuenta!")
 
     }else{
-        if(cuotasUserB<1){
+        if(cuotasUser<1){
             alert("Ingresó un número menor al minimo de cuotas ofrecidas (1)");
-        }else if(cuotasUserB>64){
+        }else if(cuotasUser>64){
             alert("Ingresó un número mayor al máximo de cuotas ofrecidas (64)")
         }else{
             alert("Ingresó un dato no válido(Ingrese números)")
