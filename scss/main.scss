@@ -7,10 +7,12 @@
 }
 html{
     font-family: 'poppins';
+    scroll-behavior: smooth;
 }
 body{
     height:100vh ;
 }
+@import "layout/header";
 
 @import "views/index";
-@import "layout/header"
+@import "views/galery";
