@@ -1,22 +1,6 @@
 
 alert("¡Bienvenido al calculador de cuotas para que puedas sacar tu boleto espacial y volar sobre la tierra!")
 
-// const nombreTripulantes= []
-
-// for(let index=0; index<5; index++){
-
-//     if(index==1){
-//         let nombre=prompt("¡Primero de todo, cuentanos el nombre del primer pasajero!")
-//         nombreTripulantes.push(nombre)
-
-//         let quit=prompt("¿Quieres agregar más pasajeros? (Si/No)")
-//         if (quit==n)
-//     }else{
-
-//     }
-    
-// }
-
 
 let aceptaCuota= prompt("¿Está interesando en realizar cuotas para hacer su viaje?. Si no, escriba 'salir'")
 

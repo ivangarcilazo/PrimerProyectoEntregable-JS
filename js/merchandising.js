@@ -1,46 +1,61 @@
 
-class Remeras {
-    constructor(color, talla, costo){
-        this.color=color.toLowerCase()
-        this.talla=talla
-        this.costo=parseInt(costo)
+class Products{
+    constructor(id, garment, size, price){
+        this.id=id
+        this.garment= garment
+        this.size=size
+        this.price=price
     }
-
 }
 
-const stockDisponibleR=[]
+let newProducts=[]
 
-stockDisponibleR.push(new Remeras('rojo', 'L', '15'))
-stockDisponibleR.push(new Remeras('verde','xl', '18'))
-stockDisponibleR.push(new Remeras('azul', 'm', '20'))
+let userChoice=prompt('¿Que quiere hacer con sus productos? \n Responda: Añadir / Salir').toLocaleLowerCase()
+    
+switch(userChoice){
+    case('añadir'):
 
-alert("¡Bienvenido a la zona de remeras! Espero que encuentres lo que buscas")
+        let quantityProducts= parseInt(prompt('¿Cúantos productos deseas agregar? \n (Número)'))
 
-let prendaUser=prompt("Escribe el color que deseas, haremos una búsqueda, y te diremos si está disponible y a que talle.")
+        for(let i=1; i<(quantityProducts+1); i++){
 
-prendaUser.toLowerCase()
+            let idNumber=i
+            alert('Product id: ' + i)
+            let gargamentType=prompt('Prenda (Vestido, remera...')
+            let sizeNumber=prompt('Talla')
+            let priceNumer=parseFloat(prompt('Precio (Numero)'))
 
-for(const Remeras of stockDisponibleR){
-    if(prendaUser==Remeras.color){
+            newProducts.push(new Products(idNumber, gargamentType, sizeNumber, priceNumer))
+        }
+        
+        let deleteProductCheck=prompt('¿Desea remover algún producto? \n Si / No').toLocaleLowerCase()
 
-        switch(prendaUser){
-            case('rojo'):
-                alert(stockDisponibleR[0])
+        switch (deleteProductCheck){
+            case('si'):
+
+                let productDelete=(parseInt(prompt('¿Cúal es el ID del producto que desea eliminar?'))-1)
+
+                newProducts.splice(productDelete,1)
+
             break;
-
-            case('verde'):
-                alert(stockDisponibleR[1])
+            case('no'):
             break;
-
-            case('azul'):
-                alert(stockDisponibleR[2])
-            break;
-
             default:
+                alert('Dato no válido')
                 break;
         }
 
-    }else{
-        alert("Lo siento, no encontramos la remera que buscabas")
-    }
+        alert('¡Listo, todo añadido. Acceda desde el console.log.')
+
+        for(const products of newProducts){
+            console.log(products)
+        }
+      
+    break;
+
+    case('salir'):
+        break;
+    default:
+        alert('Por favor, ingrese datos válidos.')
+        break;
 }
