@@ -72,8 +72,6 @@ switch(userChoice){
 alert('¡Bienvenido a la tienda de ropa!')
 
 
-//LA IDEA ES HACER UN ALGORITMO QUE ME PERMITA FILTRAR LOS PRECIOS DE LOS PRODUCTOS ya predeterminados
-
 userSearch=prompt('¿Qué es lo que buscas?  \n (Remeras, buzos o todos)').toLowerCase()
 
 function userDetails(){
