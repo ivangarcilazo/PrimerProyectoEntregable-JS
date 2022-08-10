@@ -71,47 +71,52 @@
         }
     }
     
-    a{
-        text-decoration: none;
-    }
+    .containerAncorIdx{
 
-    .container__ancla__telescope__s2__idx{
-        background-image: url("../assets/s2/james_web/james-webb-2745581.png");
-        filter:grayscale(100%);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 40vh;
-        cursor: pointer;
+        a{
+            text-decoration: none;
+        }
 
-        display: flex;
-        align-items: center;
+        .container__ancla__telescope__s2__idx{
+                background-image: url("../assets/s2/james_web/james-webb-2745581.png");
+                filter:grayscale(100%);
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                height: 33vh;
+                cursor: pointer;
         
-        transition: all 0.3s;
-        &:hover{
-            filter:grayscale(0%);
+                display: flex;
+                align-items: center;
+                
+                transition: all 0.3s;
+
+                &:hover{
+                    filter:grayscale(0%);
+                }
+        
+                .title__telescopes__idx{
+                    justify-self: end;
+                    background-image: linear-gradient(128deg, rgba(254,242,187,1) 0%, rgba(191,191,228,1) 72%);
+                    filter: grayscale(0%);
+                    margin-left: 2vw;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color:transparent;
+                    font-size: 6vw;
+                }
+        
+        }
+        .container__ancla__telescope__s2__idx-2{
+                @extend .container__ancla__telescope__s2__idx;
+                background-image: url("../assets/s2/hubble/hubble.webp");
+                background-position: center;
+                background-size: cover;
+        }
+        .container__ancla__telescope__s2__idx-3{
+                @extend .container__ancla__telescope__s2__idx;
+                background-image: url("../assets/s2/terrestre/telescopio-terrestre.png");
         }
 
-        .title__telescopes__idx{
-            justify-self: end;
-            background-image: linear-gradient(128deg, rgba(254,242,187,1) 0%, rgba(191,191,228,1) 72%);
-            filter: grayscale(0%);
-            margin-left: 2vw;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color:transparent;
-            font-size: 6vw;
-        }
-
     }
-    .container__ancla__telescope__s2__idx-2{
-        @extend .container__ancla__telescope__s2__idx;
-        background-image: url("../assets/s2/hubble/hubble.webp");
-        background-position: center;
-        background-size: cover;
-    }
-    .container__ancla__telescope__s2__idx-3{
-        @extend .container__ancla__telescope__s2__idx;
-        background-image: url("../assets/s2/terrestre/telescopio-terrestre.png");
-    }
-
+    
 }

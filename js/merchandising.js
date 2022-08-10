@@ -8,7 +8,14 @@ class Products{
     }
 }
 
-let newProducts=[]
+let newProducts=[
+    {garment:'Remera Galaxia',size:'L', price:25},
+    {garment:'Remera Estrella',size:'XL', price:157},
+    {garment:'Remera Nebulosa',size:'S', price:320},
+    {garment:'Buzo Galaxia',size:'S', price:200},
+    {garment:'Buzo Estrella',size:'M', price:350},
+    {garment:'Buzo Nebulosa',size:'XXL', price:150}
+]
 
 let userChoice=prompt('¿Que quiere hacer con sus productos? \n Responda: Añadir / Salir').toLocaleLowerCase()
     
@@ -59,3 +66,53 @@ switch(userChoice){
         alert('Por favor, ingrese datos válidos.')
         break;
 }
+
+//PRIMERA ENTREGA DEL PROYECTO FINAL
+
+alert('¡Bienvenido a la tienda de ropa!')
+
+
+//LA IDEA ES HACER UN ALGORITMO QUE ME PERMITA FILTRAR LOS PRECIOS DE LOS PRODUCTOS ya predeterminados
+
+userSearch=prompt('¿Qué es lo que buscas?  \n (Remeras, buzos o todos)').toLowerCase()
+
+function userDetails(){
+    userBudgetMax=parseInt(prompt('¿Cúal es el precio máximo a pagar?'))
+    userTalla=prompt('¿Cúal es su talla?')
+
+    return userBudgetMax, userTalla
+}
+
+
+switch(userSearch){
+    case('remeras'):
+        userDetails()
+
+        const clasificationTshirt= newProducts.filter((tshirt)=>tshirt.garment.includes('Remera'))
+
+        const clasificationPriceTshirt= clasificationTshirt.filter((price)=>price.price<userBudgetMax)
+        
+        const clasificationSize= clasificationPriceTshirt.filter((size)=>size.size==userTalla.toUpperCase())
+        
+        console.log(clasificationSize)
+
+        break;
+
+    case('buzos'):
+        userDetails()
+
+        const clasificationBuzos= newProducts.filter((buzos)=>buzos.garment.includes('Buzo'))
+
+        const clasificationPriceBuzos= clasificationBuzos.filter((price)=>price.price<userBudgetMax)
+
+        const clasificationSizeBuzos=clasificationPriceBuzos.filter((size)=>size.size==userTalla.toUpperCase())
+        
+        console.log(clasificationSizeBuzos)
+
+        break;
+
+    default:
+        console.log(newProducts)
+        break;
+}
+

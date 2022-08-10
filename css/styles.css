@@ -14,7 +14,7 @@ body {
 .header {
   width: 100%;
   height: 5vw;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -89,22 +89,22 @@ body {
       color: white;
       z-index: 10;
       font-size: 2.3vw; }
-  .telescopes__idx a {
+  .telescopes__idx .containerAncorIdx a {
     text-decoration: none; }
-  .telescopes__idx .container__ancla__telescope__s2__idx, .telescopes__idx .container__ancla__telescope__s2__idx-2, .telescopes__idx .container__ancla__telescope__s2__idx-3 {
+  .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 {
     background-image: url("../assets/s2/james_web/james-webb-2745581.png");
     filter: grayscale(100%);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 40vh;
+    height: 33vh;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: all 0.3s; }
-    .telescopes__idx .container__ancla__telescope__s2__idx:hover, .telescopes__idx .container__ancla__telescope__s2__idx-2:hover, .telescopes__idx .container__ancla__telescope__s2__idx-3:hover {
+    .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx:hover, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2:hover, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3:hover {
       filter: grayscale(0%); }
-    .telescopes__idx .container__ancla__telescope__s2__idx .title__telescopes__idx, .telescopes__idx .container__ancla__telescope__s2__idx-2 .title__telescopes__idx, .telescopes__idx .container__ancla__telescope__s2__idx-3 .title__telescopes__idx {
+    .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx .title__telescopes__idx, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2 .title__telescopes__idx, .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 .title__telescopes__idx {
       justify-self: end;
       background-image: linear-gradient(128deg, #fef2bb 0%, #bfbfe4 72%);
       filter: grayscale(0%);
@@ -112,34 +112,74 @@ body {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 6vw; }
-  .telescopes__idx .container__ancla__telescope__s2__idx-2 {
+  .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2 {
     background-image: url("../assets/s2/hubble/hubble.webp");
     background-position: center;
     background-size: cover; }
-  .telescopes__idx .container__ancla__telescope__s2__idx-3 {
+  .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 {
     background-image: url("../assets/s2/terrestre/telescopio-terrestre.png"); }
 
 .sectionGalery {
   display: flex;
   align-items: center;
-  filter: grayscale(90%);
   transition: all 0.6s; }
-  .sectionGalery:hover {
-    filter: grayscale(0%); }
   .sectionGalery .titleGalery {
-    justify-self: flex-start;
     position: absolute;
     color: white;
-    font-size: 7vw;
+    font-size: 9vw;
     margin-left: 1vw;
-    transition: all 0.6s; }
+    transition: all 0.6s;
+    z-index: 10; }
   .sectionGalery:hover .titleGalery {
-    font-size: 3.4vw;
-    transform: translate(0vw, 8vw); }
+    transform: translate(0vw, -15vw);
+    font-size: 5vw; }
   .sectionGalery .containerGalery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow-x: hidden; }
+    .sectionGalery .containerGalery .containerImgInfo, .sectionGalery .containerGalery .containerImgInfo-2, .sectionGalery .containerGalery .containerImgInfo-3, .sectionGalery .containerGalery .containerImgInfo-4, .sectionGalery .containerGalery .containerImgInfo-5, .sectionGalery .containerGalery .containerImgInfo-6, .sectionGalery .containerGalery .containerImgInfo-7, .sectionGalery .containerGalery .containerImgInfo-8 {
+      background-image: url("../../assets/pages/galery/Hubble/01-hubble-heic1501a.jpg");
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      filter: grayscale(90%);
+      transition: all  0.3s; }
+      .sectionGalery .containerGalery .containerImgInfo .containerInfo, .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo, .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo {
+        visibility: hidden;
+        align-self: flex-end;
+        background: black;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.689513) 22%, black 97%, black 100%);
+        height: 10vw;
+        padding-top: 2.5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        transform: translate(0vw, 0vw);
+        transition: all 0.3s; }
+        .sectionGalery .containerGalery .containerImgInfo .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo h2, .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo h2 {
+          color: white; }
+        .sectionGalery .containerGalery .containerImgInfo .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo p, .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo p {
+          color: white; }
+      .sectionGalery .containerGalery .containerImgInfo:hover, .sectionGalery .containerGalery .containerImgInfo-2:hover, .sectionGalery .containerGalery .containerImgInfo-3:hover, .sectionGalery .containerGalery .containerImgInfo-4:hover, .sectionGalery .containerGalery .containerImgInfo-5:hover, .sectionGalery .containerGalery .containerImgInfo-6:hover, .sectionGalery .containerGalery .containerImgInfo-7:hover, .sectionGalery .containerGalery .containerImgInfo-8:hover {
+        width: 40vw;
+        filter: grayscale(0%); }
+      .sectionGalery .containerGalery .containerImgInfo:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-2:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-3:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-4:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-5:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-6:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-7:hover .containerInfo, .sectionGalery .containerGalery .containerImgInfo-8:hover .containerInfo {
+        visibility: visible;
+        height: 11vw; }
+    .sectionGalery .containerGalery .containerImgInfo-2 {
+      background-image: url("../../assets/pages/galery/Hubble/04-hubble-heic1307a.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-3 {
+      background-image: url("../../assets/pages/galery/Hubble/1366_2000.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-4 {
+      background-image: url("../../assets/pages/galery/Hubble/Nebulosa-NGC-captada-Hubble_1348975254_104689434_1200x675.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-5 {
+      background-image: url("../../assets/pages/galery/JamesWeb/quinteto-de-stephan_ec9d4487_2000x1917.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-6 {
+      background-image: url("../../assets/pages/galery/JamesWeb/main_image_deep_field_smacs0723-5mb.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-7 {
+      background-image: url("../../assets/pages/galery/JamesWeb/MU7OZ7SZ2NG2ZEKY5HAMHSLADY.jpg"); }
+    .sectionGalery .containerGalery .containerImgInfo-8 {
+      background-image: url("../../assets/pages/galery/JamesWeb/62450424_401.jpg"); }
     .sectionGalery .containerGalery img {
       width: 25vw;
       height: 100vh;
